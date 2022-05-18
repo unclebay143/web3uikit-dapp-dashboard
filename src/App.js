@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { NotificationProvider } from "web3uikit";
+import { MoralisProvider } from "react-moralis";
+import { Dashboard } from "./component/Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MoralisProvider
+      serverUrl={process.env.REACT_APP_MORALIS_SERVER_URL}
+      appId={process.env.REACT_APP_MORALIS_APP_ID}
+    >
+      <NotificationProvider>
+        <Dashboard />
+      </NotificationProvider>
+    </MoralisProvider>
   );
 }
 
