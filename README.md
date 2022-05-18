@@ -1,4 +1,11 @@
-##
+## Web3 for Frontend Developers - Getting Started with Moralis Web3UI Kit Library 💅
+
+## Technology Used
+
+- React
+- Web3UI Kit
+- Moralis React SDK
+- Yarn
 
 
 ## Demo
